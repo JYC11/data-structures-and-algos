@@ -1,0 +1,4 @@
+1. Try solving the problem for 1 hour minimum
+2. If you know a general approach but can't make code it, peek the answer for a hint
+3. If you can't solve after peeking then look at answer
+4. Try solving the problem again after a while
