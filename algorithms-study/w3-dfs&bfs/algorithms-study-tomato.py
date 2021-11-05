@@ -25,7 +25,12 @@ def bfs():
             if 0<=nx<N and 0<=ny<M and box[nx][ny] == 0:
                 box[nx][ny] = box[x][y] + 1
                 q.append([nx,ny])
+"""
+[5,4,3]
+[4,3,2]
+[3,2,1]
 
+"""
 bfs()
 
 days = 0
