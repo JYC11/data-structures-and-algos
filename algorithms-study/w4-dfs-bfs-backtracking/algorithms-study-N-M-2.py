@@ -10,16 +10,16 @@ result = []
 
 check = [False] * (N+1)
 
-def recur():
+def recur(num):
     if len(result) == M:
         print(' '.join(map(str, result)))
         return
-    for i in range(1,N+1):
+    for i in range(num,N+1):
         if check[i] == False:
             check[i] = True
             result.append(i)
-            recur()
+            recur(i+1)
             check[i] = False
             result.pop()
 
-recur()
+recur(1)
