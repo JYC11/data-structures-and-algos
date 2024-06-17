@@ -8,8 +8,9 @@
 
 """
 
+from collections import defaultdict, deque
 from typing import Optional
-from collections import deque, defaultdict
+
 
 class TreeNode:
     def __init__(self, val) -> None:
