@@ -1,5 +1,11 @@
 # Function to count live neighbors
-def count_live_neighbors(row_num: int, col_num: int, max_rows: int, max_cols: int) -> int:
+def count_live_neighbors(
+    row_num: int,
+    col_num: int,
+    max_rows: int,
+    max_cols: int,
+    graph: list[list[int]],
+) -> int:
     directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
     count = 0
     for row_increment, col_increment in directions:
@@ -20,7 +26,7 @@ def next_state(graph: list[list[int]]) -> list[list[int]]:
     # Iterate over each cell in the graph, skipping the edges
     for r in range(1, num_rows - 1):
         for c in range(1, num_cols - 1):
-            live_neighbors = count_live_neighbors(r, c, num_rows, num_cols)
+            live_neighbors = count_live_neighbors(r, c, num_rows, num_cols, graph)
             if graph[r][c] == 1:  # Checks live nodes
                 if live_neighbors < 2 or live_neighbors > 3:
                     next_graph[r][c] = 0  # Dies due to underpopulation or overpopulation
